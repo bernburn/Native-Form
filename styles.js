@@ -28,5 +28,30 @@ export const s = StyleSheet.create({
         boxSizing: "border-box",
         padding: "10px",
     },
+    Card: {
+        padding: "20px",
+        width: "400px",
+        backgroundColor: "#fff",
+        borderRadius: "15px",
+        overflow: "hidden",
+        marginBottom: "15px",
+    },
+    BoldText: {
+        fontSize: "20px",
+        fontWeight: "800"
+    },
+    SmallText: {
+        fontSize: "15px",
+        fontWeight: "500"
+    },
+    userContainer: {
+        margin: "auto"
+    },
+    title: {
+        fontSize: "25px",
+        fontWeight: "700",
+        textAlign: "center",
+        padding: "20px"
+    }
 })
 

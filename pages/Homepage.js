@@ -8,7 +8,10 @@ export default function Homepage({navigation}){
             <View>
                 <Button title="Register" onPress={() => navigation.navigate('Register')}>
                 </Button>
+                
+                <Button title="View User List" onPress={() => navigation.navigate('UserList')}></Button>
             </View>
+
         </View>
     )
 }
