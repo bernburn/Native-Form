@@ -53,7 +53,6 @@ export default function UserListPage({navigation}){
     return(
         <View style={s.userContainer}>
             <Text style={s.title}>Registered User</Text>
-            <ScrollView>
             <FlatList data={users} keyExtractor={(item) => item.id.toString()} 
             renderItem={({item}) => (
 
@@ -67,7 +66,6 @@ export default function UserListPage({navigation}){
 
 
             )} />
-            </ScrollView>
         </View>
     )
 }
