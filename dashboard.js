@@ -9,7 +9,7 @@ import EditUserPage from './pages/EditUserPage.js'
 
 const Stack = createNativeStackNavigator();
 
-export default function Dashboard(){
+function Dashboard(){
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Home">
@@ -22,3 +22,5 @@ export default function Dashboard(){
         </NavigationContainer>
     )
 }
+
+export default Dashboard;

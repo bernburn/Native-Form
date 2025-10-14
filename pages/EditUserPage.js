@@ -7,7 +7,7 @@ export default function UserListPage(){
     const[users,setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get("http://192.168.20.225:8000/signapp/api/users/")
+        axios.get("http://127.0.0.1:8000/signapp/api/users/")
         .then((res) => {
             setUsers(res.data);
         })
