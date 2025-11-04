@@ -6,8 +6,10 @@ import {s} from '../styles.js'
 export default function UserListPage({navigation}){
     const[users,setUsers] = useState([]);
 
+    const APIURL = "project101-k5nv.onrender.com"
+
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/signapp/api/users/")
+        axios.get(APIURL,"/signapp/api/users/")
         .then((res) => {
             setUsers(res.data);
         })
@@ -46,7 +48,7 @@ export default function UserListPage({navigation}){
         //     )
         // );
 
-        axios.delete(`http://127.0.0.1:8000/signapp/api/users/${id}/`)
+        axios.delete(APIURL,`/signapp/api/users/${id}/`)
 
     };
 

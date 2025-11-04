@@ -12,6 +12,8 @@ export default function EditUserPage({route, navigation}) {
     const [user_password, setPassword] = useState(user.password);
     const [user_gender, setGender] = useState(user.gender);
 
+    const APIURL = "https://project101-k5nv.onrender.com"
+
     const handleUpdate = () => {
         if (!firstname || !lastname || !user_email || !user_password || !user_gender) {
             window.alert("Error", " Please fill up all required fields.");
@@ -19,7 +21,7 @@ export default function EditUserPage({route, navigation}) {
         }
 
         axios
-            .put(`http://127.0.0.1:8000/signapp/api/users/${user.id}/`, {
+            .put(APIURL,`/signapp/api/users/${user.id}/`, {
                 first_name: firstname,
                 last_name: lastname,
                 email: user_email,
