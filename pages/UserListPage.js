@@ -3,10 +3,10 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {s} from '../styles.js'
 
+const APIURL = "https://project101-k5nv.onrender.com"
+
 export default function UserListPage({navigation}){
     const[users,setUsers] = useState([]);
-
-    const APIURL = "project101-k5nv.onrender.com"
 
     useEffect(() => {
         axios.get(APIURL,"/signapp/api/users/")

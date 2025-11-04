@@ -2,9 +2,10 @@ import {View, Text, Button, Alert} from "react-native";
 import { s } from "../styles";
 import axios from "axios"
 
+const APIURL = "https://project101-k5nv.onrender.com"
+
 export default function ReviewPage({route, navigation}){
 
-const APIURL = "https://project101-k5nv.onrender.com"
 
 const {formData} = route.params;
     const handleSubmit = async () => {

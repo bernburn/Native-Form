@@ -3,6 +3,9 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {s} from '../styles.js'
 
+const APIURL = "https://project101-k5nv.onrender.com"
+
+
 export default function EditUserPage({route, navigation}) {
     const {user} = route.params;
 
@@ -12,7 +15,6 @@ export default function EditUserPage({route, navigation}) {
     const [user_password, setPassword] = useState(user.password);
     const [user_gender, setGender] = useState(user.gender);
 
-    const APIURL = "https://project101-k5nv.onrender.com"
 
     const handleUpdate = () => {
         if (!firstname || !lastname || !user_email || !user_password || !user_gender) {
