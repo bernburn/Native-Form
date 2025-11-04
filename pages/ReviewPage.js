@@ -2,15 +2,12 @@ import {View, Text, Button, Alert} from "react-native";
 import { s } from "../styles";
 import axios from "axios"
 
-const APIURL = "https://project101-k5nv.onrender.com"
-
 export default function ReviewPage({route, navigation}){
-
 
 const {formData} = route.params;
     const handleSubmit = async () => {
         try {
-            const response = await axios.post(APIURL,"/signapp/api/register/", formData);
+            const response = await axios.post("https://project101-k5nv.onrender.com/signapp/api/register/", formData);
             Alert.alert("Success", "User registered successfully");
             navigation.getBack();
         }catch (error) {

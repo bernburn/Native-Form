@@ -3,13 +3,11 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {s} from '../styles.js'
 
-const APIURL = "https://project101-k5nv.onrender.com"
-
 export default function UserListPage({navigation}){
     const[users,setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get(APIURL,"/signapp/api/users/")
+        axios.get("https://project101-k5nv.onrender.com/signapp/api/users/")
         .then((res) => {
             setUsers(res.data);
         })
@@ -48,7 +46,7 @@ export default function UserListPage({navigation}){
         //     )
         // );
 
-        axios.delete(APIURL,`/signapp/api/users/${id}/`)
+        axios.delete(`https://project101-k5nv.onrender.com/signapp/api/users/${id}/`)
 
     };
 

@@ -3,9 +3,6 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {s} from '../styles.js'
 
-const APIURL = "https://project101-k5nv.onrender.com"
-
-
 export default function EditUserPage({route, navigation}) {
     const {user} = route.params;
 
@@ -23,7 +20,7 @@ export default function EditUserPage({route, navigation}) {
         }
 
         axios
-            .put(APIURL,`/signapp/api/users/${user.id}/`, {
+            .put(`https://project101-k5nv.onrender.com/signapp/api/users/${user.id}/`, {
                 first_name: firstname,
                 last_name: lastname,
                 email: user_email,
